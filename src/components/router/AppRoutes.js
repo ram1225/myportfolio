@@ -36,7 +36,7 @@ export default class AppRoutes extends Component{
 
     render(){
         return (
-          <div style={{height: '100%'}}>
+          <div style={{height: '100%', textAlign:'center'}}>
               {
                   this.routes.map((route, index)=>(
                     <Route

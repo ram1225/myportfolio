@@ -120,7 +120,7 @@ hr{
   align-items: center;
   position: absolute;
   width: 95vw;
-  height: 25em;
+  height: 87vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -143,6 +143,7 @@ hr{
   flex-direction: row;
   align-items: center;
   height: 100%;
+  justify-content: center;  
 }
 
 .center-align{
@@ -156,6 +157,7 @@ hr{
 .home-content-container a{
   border-bottom: none;
   margin-bottom: 0;
+  width: 100%;
 }
 .contact-button:hover{
   background-color: #333 !important;
@@ -172,16 +174,25 @@ hr{
 
 }
 
-.logo-container{
-  margin-left: 2em;
+.contact-link{
+  display: inline-block;
 }
 
+.contact-container{
+  display: inline-block; 
+  text-align: left;
+}
 
 @media (min-width: 320px) and (max-width: 767px) {
 
   .App{
     height: 100% !important;
     width: 100% !important;
+  }
+
+  .Logo{
+    width: 12em;
+    height: 12em;
   }
 
   .desktop-list{
@@ -220,14 +231,18 @@ hr{
   .home-container{
     display: flex;
     flex-direction: column;
-  }
-
-  .logo-container{
-    margin-left: 0;
+    background-color: white;
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
   }
 
   .home-content-container{
     margin-left: 0;
+  }
+
+  .contact-container{
+    display: block; 
   }
 }
 
