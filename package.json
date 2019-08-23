@@ -1,10 +1,13 @@
 {
-  "name": "myportfolio",
+  "name": "com.myportfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/icons": "^4.2.1",
+    "material-icons-react": "^1.0.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.0"
   },
   "scripts": {
@@ -27,5 +30,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Ramakrishna",
+  "license": "ISC"
 }

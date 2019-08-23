@@ -1,33 +1,233 @@
+@font-face {
+  font-family: 'Roboto Light';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Light'), local('RobotoLight'),
+        url('./assets/fonts/Custom-Sans.ttf') format('truetype');
+}
+
+body {
+  font-family: 'RobotoLight';
+}
+
 .App {
-  text-align: center;
+  height: 90vh;
+  width: 90vw;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F0F0F0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-section {
+  padding: 10px;
+}
+
+span.r-logo{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 50px;
+  font-size: x-large;
+  margin-left: 1em;
+  flex-direction: row;
 }
 
+.App-navbar{
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.desktop-list{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: flex-end;
+  user-select: none; 
+}
+
+
+a{
+  display: block;
+  width: 6em;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 13px;
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+a:hover, .active{
+  border-bottom: 2px solid #000;
+  margin-bottom: -15px;
+  cursor: pointer;
+}
+
+hr{
+  background: #33333352;
+  border: none;
+  height: 0.5px;
+}
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu-container {
+  display: none;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 20px;
+  height: 1.5px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(2px, 8px);
+  transform: rotate(-45deg) translate(2px, 8px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(0px, -10px);
+  transform: rotate(45deg) translate(0px, -10px);
+}
+
+/* for all sections */
+.app-margin{
+  margin: 1em 1em 1em 2em;
+  height: 80%;
+}
+
+/* menu pop over */
+.popup{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 95vw;
+  height: 25em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+  background-color: white;
+}
+
+.d-none{
+  display: none;
+}
+
+.Logo{
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+}
+
+.home-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+.center-align{
+  text-align: center;
+}
+
+.home-content-container{
+  margin-left: 10%;
+}
+
+.home-content-container a{
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.contact-button:hover{
+  background-color: #333 !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 15px;
+  border: none;
+}
+
+.contact-button{
+  width: 150px;
+  height: 2.5em;
+  font-size: 14px;
+
+}
+
+.logo-container{
+  margin-left: 2em;
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+  .App{
+    height: 100% !important;
+    width: 100% !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .desktop-list{
+    display: none;
+  }
+
+  .menu-container {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  hr{
+    background: #3333333b;
+    border: .5px solid;
+  }
+
+  ul{
+    margin-left: 2em;
+    list-style-type: none;
+  }
+
+  ul a{
+    display: block;
+    height: 2em;
+    font-size: 18px;
+    color: black;
+    text-align: left;
+  }
+
+  ul a:hover, .active{
+    border-bottom: none;
+    margin-bottom: 0px;
+    cursor: pointer;
+  }
+
+  .home-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo-container{
+    margin-left: 0;
+  }
+
+  .home-content-container{
+    margin-left: 0;
   }
 }
+
