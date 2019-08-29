@@ -183,6 +183,10 @@ hr{
   text-align: left;
 }
 
+.text-center{
+  text-align: center;
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
 
   .App{
@@ -243,6 +247,11 @@ hr{
 
   .contact-container{
     display: block; 
+  }
+
+  .about-container{
+    text-align: justify;
+    padding: 10px;
   }
 }
 
